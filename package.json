@@ -1,0 +1,72 @@
+{
+  "name": "vidlah-trading-overlay",
+  "version": "1.0.0",
+  "description": "AI Trading Overlay System - Screen Capture & Pattern Recognition",
+  "main": "src/electron/main.js",
+  "homepage": "./",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start:react\" \"npm run start:electron\"",
+    "start:react": "react-scripts start",
+    "start:electron": "wait-on http://localhost:3000 && electron .",
+    "build": "react-scripts build",
+    "build:electron": "npm run build && electron-builder",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "electron": "^25.3.0",
+    "electron-builder": "^24.6.3",
+    "socket.io-client": "^4.7.2",
+    "recharts": "^2.8.0",
+    "framer-motion": "^10.16.4",
+    "lucide-react": "^0.274.0",
+    "tailwindcss": "^3.3.3",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.28",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "wait-on": "^7.0.1",
+    "@types/node": "^20.5.0"
+  },
+  "build": {
+    "appId": "com.vidlah.trading-overlay",
+    "productName": "AI Trading Overlay",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "src/electron/**/*",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.finance"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

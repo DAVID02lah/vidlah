@@ -1,0 +1,58 @@
+# AI Trading Overlay System - Python Dependencies
+# Core Libraries
+opencv-python==4.8.1.78
+pillow==10.0.0
+numpy==1.24.3
+pandas==2.0.3
+scipy==1.11.1
+
+# Computer Vision & Image Processing
+scikit-image==0.21.0
+matplotlib==3.7.2
+
+# Machine Learning & AI
+torch==2.0.1
+torchvision==0.15.2
+tensorflow==2.13.0
+scikit-learn==1.3.0
+transformers==4.33.2
+huggingface-hub==0.16.4
+
+# Screen Capture & System
+mss==9.0.1
+pyautogui==0.9.54
+pynput==1.7.6
+
+# API & Web
+fastapi==0.103.1
+uvicorn==0.23.2
+websockets==11.0.3
+requests==2.31.0
+aiohttp==3.8.5
+
+# Data Sources & Finance
+yfinance==0.2.20
+alpha-vantage==2.3.1
+finnhub-python==2.4.19
+newsapi-python==0.2.6
+praw==7.7.1
+
+# NLP & Sentiment Analysis
+nltk==3.8.1
+textblob==0.17.1
+vaderSentiment==3.3.2
+
+# Database & Storage
+sqlite3
+sqlalchemy==2.0.20
+redis==4.6.0
+
+# Utilities
+python-dotenv==1.0.0
+pydantic==2.3.0
+loguru==0.7.0
+typer==0.9.0
+rich==13.5.2
+
+# GUI Framework (if using Tkinter alternative)
+customtkinter==5.2.0
